@@ -7,5 +7,6 @@ defmodule ExampleApiServer2.Router do
 
   scope "/api", ExampleApiServer2 do
     pipe_through :api
+    resources "/users", UserController, except: [:new, :edit]
   end
 end
